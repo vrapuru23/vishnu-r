@@ -8,7 +8,7 @@ const MySkills = ({ skills }) => {
       initial={{ opacity: 0, x: -100 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 1 }}
-      className="text-gray-400 body-font">
+      className="text-gray-400 body-font h-screen overflow-y-scroll scrollbar-hide scroll-smooth">
       <div className="container items-center justify-center mx-auto">
         <div className="grid grid-cols-2 mt-4 lg:grid-cols-3">
           {skills.map(skill => (
