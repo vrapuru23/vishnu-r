@@ -3,7 +3,7 @@ import MapIframe from "./MapIframe";
 import { motion } from 'framer-motion';
 
 function MapCard({ contact }) {
-  const { mapLocation, email, address, emailLabel, addressLabel } = contact[0];
+  const { mapLocation, email, address, emailLabel, addressLabel, name, nameLabel } = contact[0];
   return (
     <motion.div
       initial={{ opacity: 0, x: -100 }}
@@ -12,13 +12,17 @@ function MapCard({ contact }) {
       className={`lg:w-2/3 md:w-1/2 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative`}>
         <MapIframe mapsrc={mapLocation} />
         <div className={`bg-black relative flex md:flex-wrap p-6 rounded shadow-md`}>
-            <div className="px-6 lg:w-1/2">
-                <h2 className="text-xs font-semibold tracking-widest text-white title-font">{addressLabel}</h2>
-                <p className="mt-1">{address}</p>
-            </div>
             <div className="px-6 mt-4 lg:w-1/2 lg:mt-0">
                 <h2 className="text-xs font-semibold tracking-widest text-white title-font">{emailLabel}</h2>
                 <a href={`mailto:${email}`} className="leading-relaxed">{email}</a>
+            </div>
+            <div className="px-6 lg:w-1/2 lg:mt-0">
+                <h2 className="text-xs mt-2 font-semibold tracking-widest text-white title-font">{nameLabel}</h2>
+                <a href={`mailto:${email}`} className="leading-relaxed">{name}</a>
+            </div>
+            <div className="px-6 lg:w-1/2">
+                <h2 className="text-xs font-semibold tracking-widest text-white title-font">{addressLabel}</h2>
+                <p className="mt-1">{address}</p>
             </div>
         </div>
     </motion.div>

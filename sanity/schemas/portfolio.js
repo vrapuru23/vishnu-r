@@ -11,7 +11,7 @@ export default {
     {
       name: 'linkToProject',
       title: 'Link to Project',
-      type: 'url',
+      type: 'string',
     },
     {
       name: 'description',

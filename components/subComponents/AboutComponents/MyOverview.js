@@ -12,9 +12,15 @@ function MyOverview({ image, title, description, name, email, address }) {
           initial={{ opacity: 0, x: -200 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1.5 }}
-          className="relative w-48 h-48 overflow-hidden rounded-full lg:w-64 lg:h-64 contrast-200 grayscale">
-          <Image src={image} alt="Picture of the author" layout="fill" />
+          className="relative contrast-200 grayscale">
+          {/* <Image src={image} alt="Picture of the author" layout="fill" /> */}
+          <h1 className='text-3xl pr-8'>Vishnu Rapuru</h1>
         </motion.div>
+        <div className='flex flex-col hidden md:block'>
+          <div className='w-[0.1px] h-8 border-r-2 border-gray-500'></div>
+          <div className='w-[0.1px] h-2 mt-2 border-r-2 border-gray-500'></div>
+          <div className='w-[0.1px] h-32 mt-2 border-r-2 border-gray-500'></div>
+        </div>
         <motion.div
           initial={{ opacity: 0, x: 200 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -26,8 +32,8 @@ function MyOverview({ image, title, description, name, email, address }) {
           </p>
           <div className="text-xs relative flex flex-col py-6 bg-black rounded shadow-md md:flex-row md:space-x-6">
             <div className="space-y-4 lg:w-1/2 lg:mt-0">
-              <h2 className="tracking-widest text-white text-gray-200 title-font">NAME</h2>
-              <p className="">{name}</p>
+              <h2 className="tracking-widest text-white text-gray-200 title-font">Phone</h2>
+              <p className="leading-relaxed">{name}</p>
               <h2 className="tracking-widest text-white text-gray-200 title-font lg:mt-2">EMAIL</h2>
               <a href={`mailto:${email}`} className="leading-relaxed text-Primary">{email}</a>
             </div>
